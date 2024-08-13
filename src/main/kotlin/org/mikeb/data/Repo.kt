@@ -6,6 +6,7 @@ import java.util.Date
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class Repo(
+    // TODO add owner
     val id: Long,
     val name: String,
     @JsonProperty("full_name")
@@ -30,8 +31,9 @@ data class RepoSearchResults (
     var totalCount: Int = 0,
     @JsonProperty("incomplete_results")
     var incompleteResults: Boolean = false,
-    var items: List<Repo> = mutableListOf<Repo>(),
+    var items: MutableList<Repo> = mutableListOf<Repo>(),
     var successful: Boolean = false,
     var code: Int = 0,
-    var body: String = ""
+    var body: String = "",
+    var nextPageUrl: String? = null
 )

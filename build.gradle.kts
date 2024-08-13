@@ -17,7 +17,7 @@ dependencies {
     implementation("io.github.oshai:kotlin-logging:7.0.0")
     implementation("org.slf4j:slf4j-api:2.0.16")
 
-    runtimeOnly("org.slf4j:slf4j-simple:2.0.16")
+    runtimeOnly("ch.qos.logback:logback-classic:1.5.6")
 
     testImplementation(kotlin("test"))
 }
